@@ -9,9 +9,11 @@
       <MySkills />
       <WebProjects />
       <LittleProjects />
-   
+        
     </v-main>
- 
+ <v-footer>
+  <FooterPage />
+ </v-footer>
   </v-app>
 </template>
 
@@ -21,6 +23,7 @@ import AboutMe from "./components/AboutMe.vue";
 import MySkills from "./components/MySkills.vue";
 import WebProjects from "./components/WebProjects.vue";
 import LittleProjects from "./components/LittleProjects.vue";
+import FooterPage from "./components/FooterPage.vue";
 export default {
   name: "App",
   components: {
@@ -29,6 +32,7 @@ export default {
     MySkills,
     WebProjects,
     LittleProjects,
+    FooterPage
   },
   data: () => ({}),
 };

@@ -7,9 +7,9 @@
     </v-container>
 
     <v-container>
-      <v-row>
-        <v-col cols="3" v-for="project in littleProjects" :key="project.index">
-          <v-card class="mx-auto" max-width="344" outlined>
+      <v-row class="d-flex flex-wrap">
+        <v-col cols="3" v-for="project in littleProjects" :key="project.index" class="d-flex flex-wrap" >
+          <v-card class="mx-auto little-projects__project" max-width="344" outlined>
             <v-list-item three-line>
               <v-list-item-content>
                 <v-list-item-title class="text-h5 mb-1">
@@ -24,7 +24,9 @@
                 tile
                 size="80"
                 color="grey"
-              ></v-list-item-avatar>
+              >
+              <v-img src="../assets/Junior-Front-End-Developer_Blog-scaled.jpeg"></v-img>
+              </v-list-item-avatar>
             </v-list-item>
 
             <v-card-actions>
@@ -85,4 +87,7 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style>
+.little-projects__project {
+  min-width: 200px;
+}</style>

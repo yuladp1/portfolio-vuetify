@@ -6,25 +6,26 @@
       </v-row>
     </v-container>
     <v-container>
-      <v-row>
-        <v-col cols="4" v-for="project in webProjects" :key="project.index">
+      <v-row class="d-flex flex-wrap">
+        <v-col cols="6" v-for="project in webProjects" :key="project.index" class=" web-projects__project">
           <v-card class="mx-auto" max-width="400">
             <v-img
               class="white--text align-end"
               height="200px"
-              :src="'project.img'"
+              :src="project.img"
             >
             </v-img>
             <v-card-title>{{ project.webProjectName }}</v-card-title>
-            <v-card-text class="text--primary">
+            <v-card-text class="text--primary overflow-y-auto web-projects__card-content">
               {{ project.description }}
             </v-card-text>
-            <v-card-actions>
-              <v-btn color="orange" :href="project.codeLink" target="blank">
+            <v-spacer />
+            <v-card-actions class="d-flex flex-wrap px-2">
+              <v-btn  color="green" :href="project.codeLink" target="blank" class="ma-2 web-projects__button">
                 <v-icon>mdi-github</v-icon>
                 source code
               </v-btn>
-              <v-btn color="orange" :href="project.liveLink" target="blank">
+              <v-btn  color="green" :href="project.liveLink" target="blank" class="ma-2  web-projects__button">
                 <v-icon>mdi-github</v-icon>
                 live site
               </v-btn>
@@ -45,7 +46,7 @@ export default {
       webProjects: [
         {
           webProjectName: "Growfy",
-          img: "../src/assets/projects-image/growfy.png",
+          img: "'../src/assets/projects-image/growfy.png'",  
           codeLink: "https://github.com/yuladp1/growfy",
           liveLink: "https://yuladp1.github.io/growfy/",
           description:
@@ -77,4 +78,17 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.web-projects__project {
+  min-width: 300px;
+}
+
+@media (max-width: 1263px) {
+  .web-projects__button {
+width: 100%;
+  }
+}
+.web-projects__card-content {
+  height: 150px;
+}
+</style>
