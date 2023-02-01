@@ -1,16 +1,16 @@
 <template>
-  <v-container>
+  <v-container id="home">
     <v-parallax src="../assets/background.jpg">
       <v-row class="about-me__wrapper">
         <v-col class="d-flex flex-column align-stretch col-12 about-me">
-          <h1 class="about-me__title " >Julia Romanovska</h1>
-          <p class="text-lg-h5 text-md-h6 text-lg-h5 text-subtitle-1 "> 
+          <h1 class="about-me__title">Julia Romanovska</h1>
+          <p class="text-lg-h5 text-md-h6 text-lg-h5 text-subtitle-1" id="contacts">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
             similique sunt asperiores, cum dolorum molestias, veritatis cumque
             quasi eos porro tempore ea quis blanditiis aperiam excepturi. Autem
             corrupti assumenda cupiditate!
           </p>
-          <div class="about-me__buttons d-flex">
+          <div class="about-me__buttons d-flex" id="contacts">
             <v-btn
               elevation="7"
               x-large
@@ -65,55 +65,41 @@ export default {
   font-size: 6rem;
   line-height: 7rem;
   color: white;
-  text-shadow:
-    -0  -1px  0   #000000,
-    0   -1px  0   #000000,
-    -0   1px  0   #000000,
-    0    1px  0   #000000,
-    -1px -0   0   #000000,
-    1px  -0   0   #000000,
-    -1px  0   0   #000000,
-    1px   0   0   #000000,
-    -1px -1px 0   #000000,
-    1px  -1px 0   #000000,
-    -1px  1px 0   #000000,
-    1px   1px 0   #000000,
-    -1px -1px 0   #000000,
-    1px  -1px 0   #000000,
-    -1px  1px 0   #000000,
-    1px   1px 0   #000000;
+  text-shadow: -0 -1px 0 #000000, 0 -1px 0 #000000, -0 1px 0 #000000,
+    0 1px 0 #000000, -1px -0 0 #000000, 1px -0 0 #000000, -1px 0 0 #000000,
+    1px 0 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000,
+    1px 1px 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000,
+    -1px 1px 0 #000000, 1px 1px 0 #000000;
 }
 
 @media (max-width: 1263px) {
   .about-me__title {
-  font-size: 5rem;
-  line-height: 6rem;
+    font-size: 5rem;
+    line-height: 6rem;
   }
 }
 @media (max-width: 840px) {
   .about-me__title {
-  font-size: 4rem;
-  line-height: 5rem;
+    font-size: 4rem;
+    line-height: 5rem;
   }
 }
 @media (max-width: 690px) {
   .about-me__title {
-  font-size: 3rem;
-  line-height: 4rem;
+    font-size: 3rem;
+    line-height: 4rem;
   }
 }
 @media (max-width: 540px) {
   .about-me__title {
-  font-size: 2rem;
-  line-height: 3rem;
+    font-size: 2rem;
+    line-height: 3rem;
   }
 }
 @media (max-width: 396px) {
   .about-me__title {
-  font-size: 1.5rem;
-  line-height: 2rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
-
-
 </style>

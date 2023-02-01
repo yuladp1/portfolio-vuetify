@@ -1,16 +1,16 @@
 <template>
-  <div>
+  <div >
     <v-container>
       <v-row justify="center" class="col-12 text-center">
-        <p class="justify-center text-h3">Projects</p>
+        <p class="justify-center text-h3" id="projects">Projects</p>
       </v-row>
     </v-container>
     <v-container>
       <v-row class="d-flex flex-wrap">
-        <v-col cols="6" v-for="project in webProjects" :key="project.index" class=" web-projects__project">
+        <v-col  v-for="project in webProjects" :key="project.index" class=" web-projects__project">
           <v-card class="mx-auto" max-width="400">
             <v-img
-              class="white--text align-end"
+              class="align-end"
               height="200px"
               :src="project.img"
             >

@@ -1,15 +1,24 @@
 <template>
-  <div>
+  <div id="mini-projects">
     <v-container>
       <v-row justify="center" class="col-12 text-center">
-        <p class="justify-center text-h3">Little projects</p>
+        <p class="justify-center text-h3">Mini-projects</p>
       </v-row>
     </v-container>
 
     <v-container>
       <v-row class="d-flex flex-wrap">
-        <v-col cols="3" v-for="project in littleProjects" :key="project.index" class="d-flex flex-wrap" >
-          <v-card class="mx-auto little-projects__project" max-width="344" outlined>
+        <v-col
+          v-for="project in littleProjects"
+          :key="project.index"
+          class="d-flex flex-wrap"
+        >
+          <v-card
+            cols="3"
+            class="mx-auto little-projects__project"
+            max-width="344"
+            outlined
+          >
             <v-list-item three-line>
               <v-list-item-content>
                 <v-list-item-title class="text-h5 mb-1">
@@ -20,12 +29,10 @@
                 }}</v-list-item-subtitle>
               </v-list-item-content>
 
-              <v-list-item-avatar
-                tile
-                size="80"
-                color="grey"
-              >
-              <v-img src="../assets/Junior-Front-End-Developer_Blog-scaled.jpeg"></v-img>
+              <v-list-item-avatar tile size="80" color="grey">
+                <v-img
+                  src="../assets/Junior-Front-End-Developer_Blog-scaled.jpeg"
+                ></v-img>
               </v-list-item-avatar>
             </v-list-item>
 
@@ -46,7 +53,7 @@
 
 <script>
 export default {
-  name: "LittleProjects",
+  name: "MiniProjects",
   created() {},
   data() {
     return {
@@ -89,5 +96,6 @@ export default {
 
 <style>
 .little-projects__project {
-  min-width: 200px;
-}</style>
+  width: 300px;
+}
+</style>
