@@ -1,8 +1,9 @@
 <template>
+  <transition >
   <div >
     <v-container>
       <v-row justify="center" class="col-12 text-center">
-        <p class="justify-center text-h3" id="projects">Projects</p>
+        <p class="justify-center text-h3 projects" >Projects</p>
       </v-row>
     </v-container>
     <v-container>
@@ -34,10 +35,18 @@
         </v-col>
       </v-row>
     </v-container>
+    
   </div>
+</transition>
 </template>
 
 <script>
+import gsap from "gsap";
+
+import  VSimpleScrollTrigger  from "gsap/ScrollTrigger";
+gsap.registerPlugin(VSimpleScrollTrigger);
+
+
 export default {
   name: "WebProjects",
   created() {},
@@ -74,11 +83,32 @@ export default {
     };
   },
   props: {},
-  methods: {},
-};
-</script>
+   mounted() {
+    gsap.from('.projects', {
+        opacity: 0,
+        x: -200,
+      });
+  gsap.to(
+    ".projects",
+   { scrollTrigger: ".projects", x: 0, duration: 3 }
+   );
 
-<style scoped>
+
+  gsap.from('.web-projects__project', {
+        opacity: 0,
+              });    
+
+   gsap.to(".web-projects__project",
+   { scrollTrigger: ".projects", 
+   opacity: 1,
+   duration: 2 });
+},
+  
+}
+</script>
+	
+
+<style >
 .web-projects__project {
   min-width: 300px;
 }

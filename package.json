@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "gsap": "^3.11.4",
     "vue": "^2.6.14",
+    "vue-simple-scroll-trigger": "^0.2.96",
     "vuetify": "^2.6.0"
   },
   "devDependencies": {

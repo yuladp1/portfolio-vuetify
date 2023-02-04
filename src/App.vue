@@ -3,7 +3,9 @@
     <HeaderMenu />
 
     <v-main>
+
       <AboutMe />
+     
       <MySkills />
       <WebProjects />
       <MiniProjects />
@@ -21,6 +23,7 @@ import MySkills from "./components/MySkills.vue";
 import WebProjects from "./components/WebProjects.vue";
 import MiniProjects from "./components/MiniProjects.vue";
 import FooterPage from "./components/FooterPage.vue";
+
 export default {
   name: "App",
   components: {
@@ -32,6 +35,7 @@ export default {
     FooterPage,
   },
   data: () => ({}),
+
 };
 </script>
 <style>

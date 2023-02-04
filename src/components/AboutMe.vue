@@ -3,7 +3,9 @@
     <v-parallax src="../assets/background.jpg">
       <v-row class="about-me__wrapper">
         <v-col class="d-flex flex-column align-stretch col-12 about-me">
+          <transition @before-enter="beforenterLink" @enter="enterLink" appear>
           <h1 class="about-me__title">Julia Romanovska</h1>
+        </transition>
           <p class="text-lg-h5 text-md-h6 text-lg-h5 text-subtitle-1" id="contacts">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
             similique sunt asperiores, cum dolorum molestias, veritatis cumque
@@ -39,8 +41,8 @@
     </v-parallax>
   </v-container>
 </template>
-
 <script>
+import gsap from "gsap";
 export default {
   name: "AboutMe",
   created() {},
@@ -48,10 +50,22 @@ export default {
     return {};
   },
   props: {},
-  methods: {},
+  methods: {
+    beforenterLink(el) {
+      gsap.from(el, {
+        opacity: 0,
+        y: -200,
+      });
+    },
+    enterLink(el) {
+      gsap.to(el, {
+           duration: 1,
+        y: 0,
+      });
+    },
+  },
 };
 </script>
-
 <style scoped>
 @import url(//db.onlinewebfonts.com/c/a4745f4b1d04fa025c6a05d891ed0126?family=Monument+Extended+Ultrabold);
 .about-me__wrapper {

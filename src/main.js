@@ -1,4 +1,10 @@
 import Vue from 'vue'
+import gsap from "gsap";
+
+import  VSimpleScrollTrigger  from "gsap/ScrollTrigger";
+gsap.registerPlugin(VSimpleScrollTrigger);
+
+
 import App from './App.vue'
 import vuetify from './plugins/vuetify'
 
