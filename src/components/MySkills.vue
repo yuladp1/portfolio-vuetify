@@ -2,16 +2,16 @@
   <div>
       <v-container>
         <v-row justify="center" class="col-12 text-center">
-          <p class="justify-center text-h3">Skills</p>
+          <p class="justify-center text-h3 skills">Skills</p>
         </v-row>
       </v-container>
 
       <v-container>
         <v-row>
           <v-col class="col-6">
-            <v-img src="../assets/i-hate-css.webp"></v-img>
+            <v-img src="../assets/i-hate-css.webp" class="skills__image"></v-img>
           </v-col>
-          <v-col class="col-6">
+          <v-col class="col-6 skills__content">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
               autem. Alias perspiciatis illo molestiae in repellat aliquid amet
@@ -33,6 +33,7 @@
 </template>
 
 <script>
+import gsap from "gsap";
 export default {
   name: "MySkills",
   created() {},
@@ -41,8 +42,41 @@ export default {
       skills: ["HTML", "CSS", "SCSS", "GIT", "VUE", "Vuetify", "Gsap"],
     };
   },
-  props: {},
-  methods: {},
+  mounted() {
+    gsap.from('.skills', {
+        opacity: 0,
+        x: -200,
+      });
+  gsap.to(
+    ".skills",
+   { scrollTrigger: ".skills", x: 0, duration: 3 }
+   );
+
+
+  gsap.from('.skills__image', {
+            scaleX: 0,
+        scaleY: 0
+              });    
+
+   gsap.to(".skills__image",
+   { scrollTrigger: ".skills__image", 
+     scaleX: 1,
+   scaleY: 1,
+   duration: 2 });
+
+
+
+
+   gsap.from('.skills__content', {
+          x: +200,
+              });    
+
+   gsap.to(".skills__content",
+   { scrollTrigger: ".skills__content", 
+  x: 0,
+   duration: 2 });
+
+},
 };
 </script>
 

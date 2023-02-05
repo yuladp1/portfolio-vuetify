@@ -43,9 +43,6 @@
 <script>
 import gsap from "gsap";
 
-import  VSimpleScrollTrigger  from "gsap/ScrollTrigger";
-gsap.registerPlugin(VSimpleScrollTrigger);
-
 
 export default {
   name: "WebProjects",
@@ -96,11 +93,13 @@ export default {
 
   gsap.from('.web-projects__project', {
         opacity: 0,
+        scaleX: 0
               });    
 
    gsap.to(".web-projects__project",
    { scrollTrigger: ".projects", 
    opacity: 1,
+   scaleX: 1,
    duration: 2 });
 },
   

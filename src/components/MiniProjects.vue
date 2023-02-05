@@ -2,16 +2,16 @@
   <div id="mini-projects">
     <v-container>
       <v-row justify="center" class="col-12 text-center">
-        <p class="justify-center text-h3">Mini-projects</p>
+        <p class="justify-center text-h3 mini-projects">Mini-projects</p>
       </v-row>
     </v-container>
 
     <v-container>
-      <v-row class="d-flex flex-wrap">
+      <v-row class="d-flex flex-wrap ">
         <v-col
           v-for="project in littleProjects"
           :key="project.index"
-          class="d-flex flex-wrap"
+          class="d-flex flex-wrap mini-projects__project"
         >
           <v-card
             cols="3"
@@ -52,9 +52,34 @@
 </template>
 
 <script>
+import gsap from "gsap";
 export default {
   name: "MiniProjects",
-  created() {},
+  mounted() {
+    gsap.from('.mini-projects', {
+        opacity: 0,
+        x: -200,
+      });
+  gsap.to(
+    ".mini-projects",
+   { scrollTrigger: ".mini-projects", x: 0, duration: 3 }
+   );
+
+
+
+
+  gsap.from('.mini-projects__project', {
+            scaleX: 0,
+        scaleY: 0
+              });    
+
+   gsap.to(".mini-projects__project",
+   { scrollTrigger: ".mini-projects__project", 
+     scaleX: 1,
+   scaleY: 1,
+   duration: 2 });
+
+},
   data() {
     return {
       littleProjects: [
