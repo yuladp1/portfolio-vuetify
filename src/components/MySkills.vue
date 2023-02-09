@@ -1,8 +1,8 @@
 <template>
   <div>
       <v-container>
-        <v-row justify="center" class="col-12 text-center">
-          <p class="justify-center text-h3 skills">Skills</p>
+        <v-row >
+          <p class="mx-auto my-16 text-h3 skills">Skills</p>
         </v-row>
       </v-container>
 

@@ -1,11 +1,8 @@
 <template>
   <v-app>
     <HeaderMenu />
-
     <v-main>
-
       <AboutMe />
-     
       <MySkills />
       <WebProjects />
       <MiniProjects />
@@ -35,7 +32,6 @@ export default {
     FooterPage,
   },
   data: () => ({}),
-
 };
 </script>
 <style>
