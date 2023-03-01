@@ -2,13 +2,16 @@
   <transition>
     <div>
       <v-container>
-        <v-row >
+        <v-row>
           <p class="mx-auto my-16 text-h3" id="projects">Projects</p>
-          
         </v-row>
-        <v-row >
-     <p class="mx-auto">  
-          In project 'Portfolio' (you are looking at it right now :) ) I used Vuetify and GSAP (including plugin ScrollTrigger) to animate the appearance of sections     </p></v-row>
+        <v-row>
+          <p class="mx-auto">
+            In project 'Portfolio' (you are looking at it right now :) ) I used
+            Vuetify and GSAP (including plugin ScrollTrigger) to animate the
+            appearance of sections
+          </p></v-row
+        >
       </v-container>
       <v-container>
         <v-row class="d-flex flex-wrap">
@@ -64,6 +67,14 @@ export default {
   data() {
     return {
       webProjects: [
+        {
+          webProjectName: "Recipe app",
+          img: "'../src/assets/projects-image/recipe-app.png'",
+          codeLink: "https://github.com/yuladp1/recipe-app",
+          liveLink: "https://recipe-app-vite.netlify.app/",
+          description:
+            "I'm using Vue3,  Pinia and Bulma. In this project I use vue-router and dynamic routing (there are several pages in the application) Implemented data storage using Pinia. Also I fetch test data from json and then add new data to it via form.",
+        },
         {
           webProjectName: "Growfy",
           img: "'../src/assets/projects-image/growfy.png'",

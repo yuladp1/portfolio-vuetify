@@ -9,9 +9,8 @@
         :key="item.index"
         :href="item.route"
         @click="showcontacts(item.menuItem)"
-        
       >
-        <v-list-title >{{ item.menuItem }}</v-list-title>
+        <v-list-title>{{ item.menuItem }}</v-list-title>
       </v-list-item>
     </v-list>
 

@@ -1,16 +1,23 @@
 <template>
-  <v-container  id="home">
+  <v-container id="home">
     <v-parallax src="../assets/background.jpg">
       <v-row class="about-me__wrapper">
         <v-col class="d-flex flex-column align-stretch col-12 about-me">
           <transition @before-enter="beforenterLink" @enter="enterLink" appear>
-          <h1 class="about-me__title">Julia Romanovska</h1>
-        </transition>
+            <h1 class="about-me__title">Julia Romanovska</h1>
+          </transition>
           <p class="text-lg-h5 text-md-h6 text-lg-h5 text-subtitle-1">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
-            similique sunt asperiores, cum dolorum molestias, veritatis cumque
-            quasi eos porro tempore ea quis blanditiis aperiam excepturi. Autem
-            corrupti assumenda cupiditate!
+            Hi! I have always been interested in the process of creating
+            websites and finally thanks
+            <a href="https://www.facebook.com/wwcodekyiv" target="blank"
+              >Women Who Code Kyiv</a
+            >
+            and mentor support
+            <a href="https://medium.com/@ni4yja" target="blank"
+              >Liuba Kuibida</a
+            >
+            I have my first projects (and mini-projects :) ) The most exciting
+            thing for me is the moment of turning complex into simple.
           </p>
           <div class="about-me__buttons d-flex">
             <v-btn
@@ -55,7 +62,7 @@ export default {
     },
     enterLink(el) {
       gsap.to(el, {
-           duration: 1,
+        duration: 1,
         y: 0,
       });
     },
@@ -66,7 +73,6 @@ export default {
 @import url(//db.onlinewebfonts.com/c/a4745f4b1d04fa025c6a05d891ed0126?family=Monument+Extended+Ultrabold);
 .about-me__wrapper {
   padding: 40px 30px;
-
 }
 
 .about-me__title {

@@ -7,9 +7,6 @@
       <WebProjects />
       <MiniProjects />
     </v-main>
-    <v-footer>
-      <FooterPage />
-    </v-footer>
   </v-app>
 </template>
 
@@ -19,7 +16,6 @@ import AboutMe from "./components/AboutMe.vue";
 import MySkills from "./components/MySkills.vue";
 import WebProjects from "./components/WebProjects.vue";
 import MiniProjects from "./components/MiniProjects.vue";
-import FooterPage from "./components/FooterPage.vue";
 
 export default {
   name: "App",
@@ -29,7 +25,6 @@ export default {
     MySkills,
     WebProjects,
     MiniProjects,
-    FooterPage,
   },
   data: () => ({}),
 };

@@ -1,13 +1,13 @@
 <template>
   <div id="mini-projects">
     <v-container>
-      <v-row justify="center" >
-        <p class="mx-auto my-16 text-h3 mini-projects">Mini-projects</p>  
+      <v-row justify="center">
+        <p class="mx-auto my-16 text-h3 mini-projects">Mini-projects</p>
       </v-row>
     </v-container>
 
     <v-container>
-      <v-row class="d-flex flex-wrap ">
+      <v-row class="d-flex flex-wrap">
         <v-col
           v-for="project in littleProjects"
           :key="project.index"
@@ -56,30 +56,28 @@ import gsap from "gsap";
 export default {
   name: "MiniProjects",
   mounted() {
-    gsap.from('.mini-projects', {
-        opacity: 0,
-        x: -200,
-      });
-  gsap.to(
-    ".mini-projects",
-   { scrollTrigger: ".mini-projects", x: 0, duration: 3 }
-   );
+    gsap.from(".mini-projects", {
+      opacity: 0,
+      x: -200,
+    });
+    gsap.to(".mini-projects", {
+      scrollTrigger: ".mini-projects",
+      x: 0,
+      duration: 3,
+    });
 
+    gsap.from(".mini-projects__project", {
+      scaleX: 0,
+      scaleY: 0,
+    });
 
-
-
-  gsap.from('.mini-projects__project', {
-            scaleX: 0,
-        scaleY: 0
-              });    
-
-   gsap.to(".mini-projects__project",
-   { scrollTrigger: ".mini-projects__project", 
-     scaleX: 1,
-   scaleY: 1,
-   duration: 2 });
-
-},
+    gsap.to(".mini-projects__project", {
+      scrollTrigger: ".mini-projects__project",
+      scaleX: 1,
+      scaleY: 1,
+      duration: 2,
+    });
+  },
   data() {
     return {
       littleProjects: [
